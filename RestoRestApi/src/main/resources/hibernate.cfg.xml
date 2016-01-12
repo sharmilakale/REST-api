@@ -15,5 +15,6 @@
 		<mapping resource="User.hbm.xml" />
 		<mapping resource="ProfileAndSettings.hbm.xml" />
 		<mapping resource="Reservations.hbm.xml" />
+		<mapping resource="TableDetails.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

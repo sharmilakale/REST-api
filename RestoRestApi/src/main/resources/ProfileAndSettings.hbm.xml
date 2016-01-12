@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.egen.rest.domain.ProfileAndSettings" table="db_restaurant.restProfileSettings">
+	<class name="com.egen.rest.domain.ProfileAndSettings" table="db_restaurant.restaurant_profile_settings">
 
 		<id name="restId" type="integer">
 			<column name="restId"/>
