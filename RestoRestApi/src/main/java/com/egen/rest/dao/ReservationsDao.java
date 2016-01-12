@@ -3,8 +3,6 @@ package com.egen.rest.dao;
 
 import java.util.List;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -17,9 +15,7 @@ import com.egen.rest.hibernate.DBUtil;
 @Component
 @Qualifier("reservationsDao")
 public class ReservationsDao {
-
-	private static Log log = LogFactory.getLog(DBUtil.class);
-
+	
 	public List<Reservation> getAll() throws AppException {
 		try {
 			Session session = DBUtil.getSession();

@@ -1,18 +1,11 @@
 package com.egen.rest.dao;
 
-import java.sql.SQLException;
 import java.util.List;
-import java.util.UUID;
 
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.hibernate.Query;
-import org.hibernate.SQLQuery;
 import org.hibernate.Session;
-
-import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import com.egen.rest.domain.User;
 import com.egen.rest.exception.AppException;
@@ -22,9 +15,6 @@ import com.egen.rest.hibernate.DBUtil;
 @Component
 @Qualifier("userDao")
 public class UserDao{
-
-
-	private static Log log = LogFactory.getLog(DBUtil.class);
 
 	public List<User> getAll() throws AppException {
 		try {
@@ -43,8 +33,6 @@ public class UserDao{
 		try {
 			Session session = DBUtil.getSession();
 			session.beginTransaction();
-//			user.setId(UUID.randomUUID().toString());
-			
 			session.save(user);
 			session.getTransaction().commit();
 
